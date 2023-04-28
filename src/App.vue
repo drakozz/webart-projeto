@@ -1,0 +1,89 @@
+<template>
+  <div>
+    <Topo></Topo>
+    <NavBar></NavBar>
+    <div class="routes container">
+      <p>Home /⠀</p>
+      <span>Eletrodomésticos</span>
+    </div>
+    
+    <ContentMain>
+
+      
+    </ContentMain>
+    
+
+  </div>
+</template>
+
+<script>
+import Topo from './components/Topo.vue';
+import NavBar from './components/NavBar.vue';
+import ContentMain from './components/layouts/ContentMain.vue';
+
+
+export default {
+  name:'App',
+  components: {
+    Topo,
+    NavBar,
+    ContentMain
+  }
+
+}
+</script>
+
+<style>
+
+:root
+{
+  --text-color: black;
+  --text-color2: rgb(189, 189, 189);
+  --bg-color: #ff4f01;
+  --bg-color-banner: #edf5f8;
+  --color-button-buy: #06cc84;
+  --color-button-hover: #038354;
+
+
+  --title-font: "Montserrat", sans-serif;
+  --text-font2: "Poppins", sans-serif;
+  --text-font: "Work Sans", sans-serif;
+}
+
+*
+{
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.container{
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+/* ROUTES */
+.routes{
+  display: flex;
+  margin-top: 20px;
+}
+
+.routes p{
+  font-size: .8rem;
+  color: var(--text-color2);
+}
+
+.routes span{
+  color: var(--bg-color);
+  font-weight: bold;
+}
+
+
+</style>

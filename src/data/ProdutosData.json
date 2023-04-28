@@ -1,0 +1,74 @@
+[
+  {
+    "nome": "Forno a gás de Embutir Venax Bianco 90 Litros Branco",
+    "preço": "1.499,13",
+    "imagem": "@/assets/images/produtos/m_forno-a-g-s-de-embutir-venax-bianco-90-litros-branco-110v.jpg",
+    "desconto": "-21%"
+  },
+  {
+    "nome": "Forno a gás de Embutir Arena Eg Gll 50 Litros Grill Inox",
+    "preço": "1.410,72",
+    "imagem": "@/assets/images/produtos/m_forno-de-embutir-venax-arena-eg-gii-inox-50-litros-220v-2.jpg",
+    "desconto": "-21%"
+  },
+  {
+    "nome": "Micro-ondas LG Solo 30 Litros Preto MS3097",
+    "preço": "649,00",
+    "imagem": "@/assets/images/produtos/m_microondas-lg-solo-30-litros-preto-ms3097-220v.jpg",
+    "desconto": "-28%"
+  },
+  {
+    "nome": "Geladeira/Refrigerador Electrolux Degelo Prático 240 Litros Cycle Defrost Branco RE31 -220V",
+    "preço": "1.890,52",
+    "imagem": "@/assets/images/produtos/m_refrigerador-electrolux-degelo-pr-tico-240-litros-re31-branco-220v.jpg",
+    "desconto": "-23%"
+  },
+  {
+    "nome": "Lava e Seca LG VC5 11kg Branca CV3011WG4A",
+    "preço": "3.500,99",
+    "imagem": "@/assets/images/produtos/m_lava-e-seca-lg-vc5-11kg-branca-cv3011wg4-220v.jpg",
+    "desconto": "-20%"
+  },
+  {
+    "nome": "Forno Elétrico de Embutir Venax Grand Gourmet45 Litros Preto",
+    "preço": "793,24",
+    "imagem": "@/assets/images/produtos/m_forno-el-trico-de-embutir-venax-grand-gourmet-45-litros-preto-220v.jpg",
+    "desconto": "-21%"
+  },
+  {
+    "nome": "Geladeira/Refrigerador French Door 525L Preto GR-X228NMSM",
+    "preço": "18.266,10",
+    "imagem": "@/assets/images/produtos/m_geladeira-refrigerador-french-door-525l-preto-gr-x228nmsm-220v-14.jpg",
+    "desconto": "-20%"
+  },
+  {
+    "nome": "Lava e Seca LG Smart 14kg Branca WD14WGSP6 - 220V",
+    "preço": "4.760,90",
+    "imagem": "@/assets/images/produtos/m_lava-e-seca-lg-smart-14kg-branca-wd14wgsp6-220v.jpeg",
+    "desconto": "-23%"
+  },
+  {
+    "nome": "Coifa de Parede Fogatti Slim 90cm Vidro Curvo Inox",
+    "preço": "599,00",
+    "imagem": "@/assets/images/produtos/m_coifa-de-parede-fogatti-slim-vidro-curvo-inox-90cm-220v.png",
+    "desconto": "-32%"
+  },
+  {
+    "nome": "Micro-ondas Consul 32 Litros Branco CMS46AB",
+    "preço": "617,08",
+    "imagem": "@/assets/images/produtos/m_micro-ondas-consul-32-litros-branco-cms46ab-220v.jpg",
+    "desconto": "-21%"
+  },
+  {
+    "nome": "Forno Elétrico Continental 44 Litros Grill Branco BC44B",
+    "preço": "775,34",
+    "imagem": "@/assets/images/produtos/m_forno-el-trico-continental-44-litros-branco-bc44b-220v.jpg",
+    "desconto": "-20%"
+  },
+  {
+    "nome": "Coifa de Parede Fogatti Slim Vidro Curvo Inox 60cm",
+    "preço": "675,91",
+    "imagem": "@/assets/images/produtos/m_coifa-de-parede-fogatti-slim-vidro-curvo-inox-60cm-220v-6.jpg",
+    "desconto": "-21%"
+  }
+]
