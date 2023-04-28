@@ -39,6 +39,7 @@ export default {
 {
   --text-color: black;
   --text-color2: rgb(189, 189, 189);
+  --text-color3: rgb(44, 138, 226);
   --bg-color: #ff4f01;
   --bg-color-banner: #edf5f8;
   --color-button-buy: #06cc84;

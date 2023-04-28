@@ -55,7 +55,7 @@
   .searchBar textarea{
     height: 40px;
     width: 500px;
-    border: 1px solid --text-color2;
+    border: 1px solid var(--text-color2);
     border-radius: 10px 0 0 10px;
     outline: none;
   }
