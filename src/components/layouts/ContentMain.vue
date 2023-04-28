@@ -2,9 +2,12 @@
   <main class="main container">
       <DestaqueTopo></DestaqueTopo>
 
-      <section class="listagemProdutos">
-        <div class="cardProdutos" v-for="(produto, i) in dataProdutos" :key="i">
-          <p>{{produto.nome}}</p>
+      <section class="Produtos">
+
+        <div class="listagemProdutos"></div>
+
+        <div class="cardProdutos">
+          
         </div>
       </section>
   </main>
