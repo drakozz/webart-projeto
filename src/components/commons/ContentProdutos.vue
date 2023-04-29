@@ -1,10 +1,6 @@
 <template>
     <section class="contentProdutos">
 
-        <div class="filterProdutos">
-            <div class="filterItemPage"></div>
-        </div>
-
         <div class="cardProdutos" v-for="(produto, i) in dataProdutos" :key="i">
 
         <img :src="require(`@/assets/images/produtos/${produto.imagem}`) " alt="">
@@ -64,7 +60,7 @@ export default {
   }
 
   .cardProdutos:hover{
-    border: 1px solid black;
+    border: 1px solid var(--text-color2);
   }
 
   .cardProdutos .descontoProduto{
