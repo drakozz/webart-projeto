@@ -3,72 +3,144 @@
     "nome": "Forno a gás de Embutir Venax Bianco 90 Litros Branco",
     "preco": "1.499,13",
     "imagem": "m_forno-a-g-s-de-embutir-venax-bianco-90-litros-branco-110v.jpg",
-    "desconto": "-21%"
+    "desconto": "-21%",
+    "selos": {
+      "freteGratis": "",
+      "marca": "venax.jpg",
+      "procel": "procel.jpg",
+      "voltagem": "voltagem.jpg"
+    }
   },
   {
     "nome": "Forno a gás de Embutir Arena Eg Gll 50 Litros Grill Inox",
     "preco": "1.410,72",
     "imagem": "m_forno-de-embutir-venax-arena-eg-gii-inox-50-litros-220v-2.jpg",
-    "desconto": "-21%"
+    "desconto": "-21%",
+    "selos": {
+      "freteGratis": "",
+      "marca": "venax.jpg",
+      "procel": "procel.jpg",
+      "voltagem": "voltagem.jpg"
+    }
   },
   {
     "nome": "Micro-ondas LG Solo 30 Litros Preto MS3097",
     "preco": "649,00",
     "imagem": "m_microondas-lg-solo-30-litros-preto-ms3097-220v.jpg",
-    "desconto": "-28%"
+    "desconto": "-28%",
+    "selos": {
+      "freteGratis": "",
+      "marca": "lg.jpg",
+      "procel": "procel.jpg",
+      "voltagem": "voltagem.jpg"
+    }
   },
   {
     "nome": "Geladeira/Refrigerador Electrolux Degelo Prático 240 Litros Cycle Defrost Branco RE31 -220V",
     "preco": "1.890,52",
     "imagem": "m_refrigerador-electrolux-degelo-pr-tico-240-litros-re31-branco-220v.jpg",
-    "desconto": "-23%"
+    "desconto": "-23%",
+    "selos": {
+      "freteGratis": "",
+      "marca": "electrolux.png",
+      "procel": "procel.jpg",
+      "voltagem": "voltagem.jpg"
+    }
   },
   {
     "nome": "Lava e Seca LG VC5 11kg Branca CV3011WG4A",
     "preco": "3.500,99",
     "imagem": "m_lava-e-seca-lg-vc5-11kg-branca-cv3011wg4-220v.jpg",
-    "desconto": "-20%"
+    "desconto": "-20%",
+    "selos": {
+      "freteGratis": "",
+      "marca": "lg.jpg",
+      "procel": "procel.jpg",
+      "voltagem": "voltagem.jpg"
+    }
   },
   {
     "nome": "Forno Elétrico de Embutir Venax Grand Gourmet45 Litros Preto",
     "preco": "793,24",
     "imagem": "m_forno-el-trico-de-embutir-venax-grand-gourmet-45-litros-preto-220v.jpg",
-    "desconto": "-21%"
+    "desconto": "-21%",
+    "selos": {
+      "freteGratis": "",
+      "marca": "venax.jpg",
+      "procel": "",
+      "voltagem": "voltagem.jpg"
+    }
   },
   {
     "nome": "Geladeira/Refrigerador French Door 525L Preto GR-X228NMSM",
     "preco": "18.266,10",
     "imagem": "m_geladeira-refrigerador-french-door-525l-preto-gr-x228nmsm-220v-14.jpg",
-    "desconto": "-20%"
+    "desconto": "-20%",
+    "selos": {
+      "freteGratis": "",
+      "marca": "lg.jpg",
+      "procel": "procel.jpg",
+      "voltagem": "voltagem.jpg"
+    }
   },
   {
     "nome": "Lava e Seca LG Smart 14kg Branca WD14WGSP6 - 220V",
     "preco": "4.760,90",
     "imagem": "m_lava-e-seca-lg-smart-14kg-branca-wd14wgsp6-220v.jpeg",
-    "desconto": "-23%"
+    "desconto": "-23%",
+    "selos": {
+      "freteGratis": "frete-gratis.png",
+      "marca": "lg.jpg",
+      "procel": "procel.jpg",
+      "voltagem": "voltagem.jpg"
+    }
   },
   {
     "nome": "Coifa de Parede Fogatti Slim 90cm Vidro Curvo Inox",
     "preco": "599,00",
     "imagem": "m_coifa-de-parede-fogatti-slim-vidro-curvo-inox-90cm-220v.png",
-    "desconto": "-32%"
+    "desconto": "-32%",
+    "selos": {
+      "freteGratis": "frete-gratis.png",
+      "marca": "fogatti.jpg",
+      "procel": "",
+      "voltagem": "voltagem.jpg"
+    }
   },
   {
     "nome": "Micro-ondas Consul 32 Litros Branco CMS46AB",
     "preco": "617,08",
     "imagem": "m_micro-ondas-consul-32-litros-branco-cms46ab-220v.jpg",
-    "desconto": "-21%"
+    "desconto": "-21%",
+    "selos": {
+      "freteGratis": "frete-gratis.png",
+      "marca": "consul.jpg",
+      "procel": "procel.jpg",
+      "voltagem": "voltagem.jpg"
+    }
   },
   {
     "nome": "Forno Elétrico Continental 44 Litros Grill Branco BC44B",
     "preco": "775,34",
     "imagem": "m_forno-el-trico-continental-44-litros-branco-bc44b-220v.jpg",
-    "desconto": "-20%"
+    "desconto": "-20%",
+    "selos": {
+      "freteGratis": "",
+      "marca": "continental.jpg",
+      "procel": "",
+      "voltagem": "voltagem.jpg"
+    }
   },
   {
     "nome": "Coifa de Parede Fogatti Slim Vidro Curvo Inox 60cm",
     "preco": "675,91",
     "imagem": "m_coifa-de-parede-fogatti-slim-vidro-curvo-inox-60cm-220v-6.jpg",
-    "desconto": "-21%"
+    "desconto": "-21%",
+    "selos": {
+      "freteGratis": "",
+      "marca": "fogatti.jpg",
+      "procel": "procel.jpg",
+      "voltagem": "voltagem.jpg"
+    }
   }
 ]

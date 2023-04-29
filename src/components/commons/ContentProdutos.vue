@@ -9,11 +9,17 @@
         <p>{{produto.nome}}</p>
 
         <div class="selos">
-            <div class="seloMarca">
-            <img src="@/assets/images/selos/venax.jpg" alt="">
-            </div>
-            <img src="@/assets/images/selos/voltagem.jpg" alt="" >
-            <img src="@/assets/images/selos/procel.jpg" alt="" >
+          
+          <div class="seloFrete">
+            <img v-if="produto.selos.freteGratis !== '' " :src="require(`@/assets/images/selos/${produto.selos.freteGratis}`)" alt="">
+          </div>
+
+          <div class="seloMarca">
+            <img :src="require(`@/assets/images/selos/${produto.selos.marca}`)" alt="">
+          </div>
+
+          <img v-if="produto.selos.voltagem !== '' " :src="require(`@/assets/images/selos/${produto.selos.voltagem}`)" alt="" >
+          <img v-if="produto.selos.procel !== '' " :src="require(`@/assets/images/selos/${produto.selos.procel}`)" alt="" >
         </div>
 
         <h2>R$ {{produto.preco}}</h2>
@@ -51,6 +57,7 @@ export default {
   }
 
   .cardProdutos{
+    position: relative;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -84,7 +91,14 @@ export default {
   }
 
   .cardProdutos .selos .seloMarca{
+    margin-top: 30px;
     flex: 1 1 100%; 
+  }
+
+  .cardProdutos .selos .seloFrete{
+    position: absolute;
+    left: 10px;
+    top: 10px;
   }
 
   .cardProdutos .selos .seloMarca img{
