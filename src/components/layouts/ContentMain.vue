@@ -28,12 +28,22 @@
       </div>
 
       <div class="paginationProdutos">
-        <span>Produtos: 1-12 de 284 encontrado(s)</span>
-        <div class="paginationNumbers">
-          <a href="" class="" title="">Primeira</a>
-          <button class="paginationButton">
+        <div></div>
+        <div class="pagination">
+          <span>Produtos: 1-12 de 284 encontrado(s)</span>
+          <a href="#" class="" title=""> &lt; &lt; Primeira</a>
+          <a href="#"> &lt; Anterior</a>
+
+          <button class="paginationButton selected" >
             1
           </button>
+
+          <button class="paginationButton" v-for="(number, i) in 4" :key="i">
+            {{ number+1 }}
+          </button>
+
+          <a href="#" class="" title="">Próximo &gt; &gt;</a>
+          <a href="#">Última &gt;</a>
         </div>
       </div>
           
@@ -84,7 +94,34 @@ export default {
 }
 
 .paginationProdutos{
-  display: flex;
+  display: grid;
+  grid-template-columns: .5fr 2.5fr;
+  margin-top: 50px;
+}
+
+.paginationProdutos span,
+.paginationProdutos a{
+  color: var(--text-color2);
+  font-size: 1rem;
+  margin: 0 20px;
+}
+
+.paginationProdutos .paginationButton{
+  padding: 10px 15px;
+  background-color: white;
+  color: var(--text-color2);
+  border: none;
+  border-radius: 3px;
+}
+
+.paginationProdutos .selected{
+  color: white;
+  background-color: var(--bg-color);
+}
+
+.paginationProdutos .selected:hover,
+.paginationProdutos .paginationButton:hover{
+  cursor: pointer;
 }
 
 
