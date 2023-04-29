@@ -2,37 +2,35 @@
     <section class="contentProdutos">
 
         <div class="cardProdutos" v-for="(produto, i) in dataProdutos" :key="i">
+          <img :src="require(`@/assets/images/produtos/${produto.imagem}`) " alt="">
 
-        <img :src="require(`@/assets/images/produtos/${produto.imagem}`) " alt="">
+          <h3 class="descontoProduto">{{produto.desconto}}</h3>
+          <p>{{produto.nome}}</p>
 
-        <h3 class="descontoProduto">{{produto.desconto}}</h3>
-        <p>{{produto.nome}}</p>
+          <div class="selos">
+            <div class="seloFrete">
+              <img v-if="produto.selos.freteGratis !== '' " :src="require(`@/assets/images/selos/${produto.selos.freteGratis}`)" alt="">
+            </div>
 
-        <div class="selos">
-          
-          <div class="seloFrete">
-            <img v-if="produto.selos.freteGratis !== '' " :src="require(`@/assets/images/selos/${produto.selos.freteGratis}`)" alt="">
+            <div class="seloMarca">
+              <img :src="require(`@/assets/images/selos/${produto.selos.marca}`)" alt="">
+            </div>
+
+            <img v-if="produto.selos.voltagem !== '' " :src="require(`@/assets/images/selos/${produto.selos.voltagem}`)" alt="" >
+            <img v-if="produto.selos.procel !== '' " :src="require(`@/assets/images/selos/${produto.selos.procel}`)" alt="" >
           </div>
 
-          <div class="seloMarca">
-            <img :src="require(`@/assets/images/selos/${produto.selos.marca}`)" alt="">
-          </div>
-
-          <img v-if="produto.selos.voltagem !== '' " :src="require(`@/assets/images/selos/${produto.selos.voltagem}`)" alt="" >
-          <img v-if="produto.selos.procel !== '' " :src="require(`@/assets/images/selos/${produto.selos.procel}`)" alt="" >
-        </div>
-
-        <h2>R$ {{produto.preco}}</h2>
-        <small>
+          <h2>R$ {{produto.preco}}</h2>
+          <small>
             <span>à vista no PIX ou boleto</span>
             <br>
             ou R$ 1665,70 em 10x de R$166,57 sem juros
-        </small>
-        <button class="buttonAddCart">
+          </small>
+          
+          <button class="buttonAddCart">
             <font-awesome-icon icon="fa-solid fa-cart-shopping" />
             Adicionar ao carrinho
-        </button>
-        
+          </button>
         </div>
     </section>
 </template>
