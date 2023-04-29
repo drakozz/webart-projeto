@@ -26,6 +26,16 @@
         <LateralOptions></LateralOptions>
         <ContentProdutos></ContentProdutos>
       </div>
+
+      <div class="paginationProdutos">
+        <span>Produtos: 1-12 de 284 encontrado(s)</span>
+        <div class="paginationNumbers">
+          <a href="" class="" title="">Primeira</a>
+          <button class="paginationButton">
+            1
+          </button>
+        </div>
+      </div>
           
   </main>
 </template>
@@ -73,7 +83,9 @@ export default {
   color: var(--text-color2);
 }
 
-
+.paginationProdutos{
+  display: flex;
+}
 
 
 </style>
