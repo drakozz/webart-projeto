@@ -12,7 +12,8 @@
 <script>
 export default {
   name: 'Dropdown',
-  props: ['title', 'itens']
+  props: ['title', 'itens'],
+
 }
 </script>
 
@@ -44,6 +45,7 @@ export default {
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
+    background-color: white;
   }
 
   .navBar .subMenu li a{
