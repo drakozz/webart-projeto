@@ -1,0 +1,30 @@
+<template lang="">
+  <footer class="footer">
+        <p>2023 - Todos os direitos reservados | TESTE PARA DESENVOLVEDOR ASSISTENTE FRONTEND | CNPJ: 00.000.000/0000-00 BIRIGUI - SP</p>
+        <img src="@/assets/images/logo.jpg" alt="">
+      </footer>
+</template>
+<script>
+export default {
+  name: 'Footer'
+}
+</script>
+<style >
+  .footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 60px;
+  }
+
+  .footer p{
+    font-size: .8rem;
+    color: var(--text-color2);
+    margin-bottom: 10px;
+  }
+
+  .footer img{
+    width: 10%;
+  }
+</style>

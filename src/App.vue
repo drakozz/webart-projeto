@@ -8,11 +8,9 @@
     </div>
     
     <ContentMain>
-
-      
     </ContentMain>
     
-
+    <Footer></Footer>
   </div>
 </template>
 
@@ -20,6 +18,7 @@
 import Topo from './components/Topo.vue';
 import NavBar from './components/NavBar.vue';
 import ContentMain from './components/layouts/ContentMain.vue';
+import Footer from './components/layouts/Footer.vue';
 
 
 export default {
@@ -27,7 +26,8 @@ export default {
   components: {
     Topo,
     NavBar,
-    ContentMain
+    ContentMain,
+    Footer
   }
 
 }
