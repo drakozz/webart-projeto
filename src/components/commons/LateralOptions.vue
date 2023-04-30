@@ -56,28 +56,28 @@
 
           <div class="priceOptions">
             <fieldset>
-              <input type="radio" id="priceOptions1" name="priceOptions" value="child">
+              <input type="radio" id="priceOptions1" name="priceOptions" value="665.00-5575.00" v-model="filterPrice" @change="filterProdutos">
               <label for="priceOptions1"> R$665,00 a 5573,00</label><br>
             </fieldset>
             
             <fieldset>
-              <input type="radio" id="priceOptions2" name="priceOptions" value="adult">
+              <input type="radio" id="priceOptions2" name="priceOptions" value="5573.01-10480.00" v-model="filterPrice" @change="filterProdutos">
               <label for="priceOptions2"> R$5573,01 - 10480,00</label><br>
             </fieldset>
 
             <fieldset>
-              <input type="radio" id="priceOptions3" name="priceOptions" value="senior">
+              <input type="radio" id="priceOptions3" name="priceOptions" value="10480.01-15388.00" v-model="filterPrice" @change="filterProdutos">
               <label for="priceOptions3"> R$10480,01 - 15388,00</label><br>
             </fieldset>
 
             <fieldset>
-              <input type="radio" id="priceOptions4" name="priceOptions" value="senior">
+              <input type="radio" id="priceOptions4" name="priceOptions" value="15388.01-20295.00" v-model="filterPrice" @change="filterProdutos">
               <label for="priceOptions4"> R$15388,01 - 20295,00</label><br>
             </fieldset>
 
             <fieldset>
-              <input type="radio" id="priceOptions5" name="priceOptions" value="senior">
-              <label for="priceOptions5"> R$20295,01 - 25203,00</label>
+              <input type="radio" id="priceOptions5" name="priceOptions" value="20295.01-25203.00" v-model="filterPrice" @change="filterProdutos">
+              <label for="priceOptions5"> R$20295,01 - 25203,00 {{ filterPrice }}</label>
             </fieldset>      
           </div>
         </div>
@@ -85,9 +85,19 @@
 </template>
 
 <script>
-export default {
-    name: 'LateralOptions'
+
+export default{
+  name: 'LateralOptions',
+  data: () => ({
+    filterPrice: null
+  }),
+  methods: {
+    filterProdutos(){
+      this.$emit('filterSelected', this.filterPrice)
+    }
+  },
 }
+
 </script>
 
 <style>

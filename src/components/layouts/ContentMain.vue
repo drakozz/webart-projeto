@@ -23,8 +23,8 @@
     </div>
 
     <div class="gridListingContainer">
-      <LateralOptions></LateralOptions>
-      <ContentProdutos></ContentProdutos>
+      <LateralOptions @filterSelected="handleFilter"></LateralOptions>
+      <ContentProdutos :filterProduto="filterProduto"></ContentProdutos>
     </div>
 
     <PaginationProdutos></PaginationProdutos>
@@ -44,6 +44,14 @@ export default {
     ContentProdutos,
     LateralOptions,
     PaginationProdutos
+  },
+  data: () => ({
+    filterProduto: null
+  }),
+  methods: {
+    handleFilter(filter){
+      this.filterProduto = filter;
+    }
   }
 }
 </script>
