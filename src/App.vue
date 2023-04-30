@@ -1,7 +1,6 @@
 <template>
   <div>
     <Topo></Topo>
-    <NavBar></NavBar>
     <div class="routes container">
       <p>Home /⠀</p>
       <span>Eletrodomésticos</span>
@@ -15,8 +14,7 @@
 </template>
 
 <script>
-import Topo from './components/Topo.vue';
-import NavBar from './components/NavBar.vue';
+import Topo from './components/layouts/Topo.vue';
 import ContentMain from './components/layouts/ContentMain.vue';
 import Footer from './components/layouts/Footer.vue';
 
@@ -25,7 +23,6 @@ export default {
   name:'App',
   components: {
     Topo,
-    NavBar,
     ContentMain,
     Footer
   }
