@@ -3,7 +3,11 @@
         <div></div>
         <div class="pagination">
           <span>Produtos: 1-12 de 284 encontrado(s)</span>
+          <font-awesome-icon icon="fa-solid fa-chevron-left"/>
+          <font-awesome-icon icon="fa-solid fa-chevron-left"/>
           <a href="#" class="" title=""> Primeira</a>
+
+          <font-awesome-icon icon="fa-solid fa-chevron-left"/>
           <a href="#"> Anterior</a>
 
           <button class="paginationButton selected" >
@@ -15,7 +19,11 @@
           </button>
 
           <a href="#" class="" title="">Próximo </a>
+          <font-awesome-icon icon="fa-solid fa-chevron-right"/>
+          
           <a href="#">Última</a>
+          <font-awesome-icon icon="fa-solid fa-chevron-right"/>
+          <font-awesome-icon icon="fa-solid fa-chevron-right"/>
         </div>
       </div>
 </template>
@@ -25,6 +33,16 @@ export default {
 }
 </script>
 <style>
+  .pagination{
+    display: flex;
+    align-items: center;
+  }
+
+  .pagination svg{
+    color: rgb(133, 133, 133); 
+    font-size: .8rem;
+  }
+
   .paginationProdutos{
   display: grid;
   grid-template-columns: .5fr 2.5fr;

@@ -1,7 +1,6 @@
 <template>
     <section class="contentProdutos">
-
-        <div class="cardProdutos" v-for="(produto, i) in dataProdutos" :key="i">
+        <div class="cardProdutos" v-for="(produto, i) in produtosFiltrados" :key="i">
           <img :src="require(`@/assets/images/produtos/${produto.imagem}`) " alt="">
 
           <h3 class="descontoProduto">{{produto.desconto}}</h3>
@@ -39,11 +38,36 @@
 import ProdutosData from '@/data/ProdutosData.json'
 
 export default {
-    name: 'ContentProdutos',
-    data: () => ({
-    dataProdutos: ProdutosData
-  })
+  name: 'ContentProdutos',
+  data: () => ({
+  dataProdutos: ProdutosData,
+  }),
+  props: {
+    filterProduto:{
+      type: String,
+      default: ''
+  }},
+  computed:{
+    produtosFiltrados(){
+      
+      if(this.filterProduto === null){
+        return this.dataProdutos
+      }
+      else{
+        let valor = this.filterProduto.split('-')
+        let [min, max] = valor
+        return this.dataProdutos.filter(
+          produto => 
+          parseFloat(produto.preco) >= parseFloat(min)
+          &&
+          parseFloat(produto.preco) <= parseFloat(max)
+        )
+      }
+    }
+
+  }
 }
+
 </script>
 
 <style>
