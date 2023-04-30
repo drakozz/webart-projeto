@@ -27,61 +27,57 @@
     </div>
   </header>
 </template>
-
 <script>
-  export default {
-    name:'Topo'
-  }
+export default {
+  name:'Header'
+}
 </script>
-
-
-<style>
-    /* CSS TOPO */
-
+<style >
+  /* CSS TOPO */
   .topo{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
   }
 
   .searchBar{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   }
 
   .searchBar input, 
   .searchBar textarea{
-    height: 40px;
-    width: 500px;
-    border: 1px solid var(--text-color2);
-    border-radius: 10px 0 0 10px;
-    outline: none;
+  height: 40px;
+  width: 500px;
+  border: 1px solid var(--text-color2);
+  border-radius: 10px 0 0 10px;
+  outline: none;
   }
 
   .searchBar img{
-    height: 42px;
+  height: 42px;
   }
 
   .searchBar a{
-    margin-top: 8px;
+  margin-top: 8px;
   }
 
   .userSpace p{
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: var(--bg-color);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: var(--bg-color);
   }
 
   .userSpace a{
-    color: black;
-    font-size: .8rem;
-    text-decoration: underline;
+  color: black;
+  font-size: .8rem;
+  text-decoration: underline;
   }
 
   .myCart h4{
-    color: var(--bg-color);
-    font-size: 1.1rem;
+  color: var(--bg-color);
+  font-size: 1.1rem;
   }
 </style>
