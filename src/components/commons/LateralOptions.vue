@@ -77,7 +77,7 @@
 
             <fieldset>
               <input type="radio" id="priceOptions5" name="priceOptions" value="20295.01-25203.00" v-model="filterPrice" @change="filterProdutos">
-              <label for="priceOptions5"> R$20295,01 - 25203,00 {{ filterPrice }}</label>
+              <label for="priceOptions5"> R$20295,01 - 25203,00</label>
             </fieldset>      
           </div>
         </div>
