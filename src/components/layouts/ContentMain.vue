@@ -1,24 +1,25 @@
 <template>
   <main class="main container">
-    <DestaqueTopo></DestaqueTopo>
-
+    <MobileDestaqueTopo v-if="isMobile"></MobileDestaqueTopo>
+    <DestaqueTopo v-else></DestaqueTopo>
+    
     <div class="filterProdutos">
       <div class="filterItemPage">
-          <p>Itens por página: </p>
-          <select name="" id="">
-            <option value="">12</option>
-            <option value="">24</option>
-            <option value="">36</option>
-          </select>
+        <p>Itens por página: </p>
+        <select name="" id="">
+          <option value="">12</option>
+          <option value="">24</option>
+          <option value="">36</option>
+        </select>
       </div>
-      
+
       <div class="filterByPrice">
-          <p>Ordenar por: </p>
-          <select name="" id="">
-            <option value="">Popularidade</option>
-            <option value="">Menor Preço</option>
-            <option value="">Maior Preço</option>
-          </select>
+        <p>Ordenar por: </p>
+        <select name="" id="">
+          <option value="">Popularidade</option>
+          <option value="">Menor Preço</option>
+          <option value="">Maior Preço</option>
+        </select>
       </div>
     </div>
 
@@ -33,7 +34,8 @@
 <script>
 
 import DestaqueTopo from '../commons/DestaqueTopo.vue';
-import LateralOptions from'../commons/LateralOptions.vue';
+import MobileDestaqueTopo from '../mobile/MobileDestaqueTopo.vue';
+import LateralOptions from '../commons/LateralOptions.vue';
 import ContentProdutos from '../commons/ContentProdutos.vue';
 import PaginationProdutos from '../commons/PaginationProdutos.vue';
 
@@ -43,47 +45,49 @@ export default {
     DestaqueTopo,
     ContentProdutos,
     LateralOptions,
-    PaginationProdutos
+    PaginationProdutos,
+    MobileDestaqueTopo
   },
   data: () => ({
     filterProduto: null
   }),
   methods: {
-    handleFilter(filter){
+    handleFilter(filter) {
       this.filterProduto = filter;
+    }
+  },
+  computed: {
+    isMobile() {
+      return window.innerWidth < 768;
     }
   }
 }
 </script>
 
 <style>
-
-.gridListingContainer{
+.gridListingContainer {
   display: grid;
   grid-template-columns: .5fr 2.5fr;
   column-gap: 40px;
 }
 
-.filterProdutos{
+.filterProdutos {
   display: flex;
   justify-content: flex-end;
   margin-top: 30px;
 }
 
 .filterProdutos .filterItemPage,
-.filterProdutos .filterByPrice{
+.filterProdutos .filterByPrice {
   display: flex;
   align-items: center;
   margin-left: 20px;
   color: var(--text-color2);
 }
 
-.filterProdutos select{
+.filterProdutos select {
   padding: 5px;
   border-radius: 3px;
   color: var(--text-color2);
 }
-
-
-
 </style>

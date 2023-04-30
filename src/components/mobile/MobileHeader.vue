@@ -1,7 +1,7 @@
 <template>
   <header class="mobileHeader">
     <div class="logo">
-      <font-awesome-icon icon="fa-solid fa-bars"/>
+      <font-awesome-icon icon="fa-solid fa-bars" class="icon-open" @click="openMenu"/>
       <a href="">
         <img src="@/assets/images/logo.jpg" alt="">
       </a>
@@ -17,7 +17,12 @@
 </template>
 <script>
 export default {
-  name: 'MobileHeader'
+  name: 'MobileHeader',
+  methods: {
+    openMenu() {
+      this.$emit('openMenu', true);
+    }
+  }
 }
 </script>
 <style>
@@ -30,7 +35,6 @@ export default {
   .mobileHeader .logo{
     display: flex;
     align-items: center;
-    justify-content: center;
   }
 
   .mobileHeader .logo svg{
@@ -43,12 +47,12 @@ export default {
     display: flex;
     justify-content: center;
     margin-bottom: 15px;
-    width: 80%;
+    width: 90%;
   }
 
   .mobileSearchBar input, 
   .mobileSearchBar textarea{
-  height: 50px;
+  height: 40px;
   width: 500px;
   border: 1px solid var(--text-color2);
   border-radius: 10px 0 0 10px;
@@ -56,6 +60,6 @@ export default {
   }
 
   .mobileSearchBar img{
-    height: 3.2rem;
+    height: 2.6rem;
   }
 </style>
