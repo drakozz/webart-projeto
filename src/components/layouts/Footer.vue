@@ -9,7 +9,7 @@ export default {
   name: 'Footer'
 }
 </script>
-<style >
+<style>
   .footer{
     display: flex;
     justify-content: center;
@@ -26,5 +26,11 @@ export default {
 
   .footer img{
     width: 10%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .footer img{
+      width: 60%;
+    }
   }
 </style>

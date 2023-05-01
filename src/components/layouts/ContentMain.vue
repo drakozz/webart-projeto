@@ -3,7 +3,7 @@
     <MobileDestaqueTopo v-if="isMobile"></MobileDestaqueTopo>
     <DestaqueTopo v-else></DestaqueTopo>
     
-    <div class="filterProdutos">
+    <div class="filterProdutos" v-if="!isMobile">
       <div class="filterItemPage">
         <p>Itens por página: </p>
         <select name="" id="">
@@ -24,7 +24,7 @@
     </div>
 
     <div class="gridListingContainer">
-      <LateralOptions @filterSelected="handleFilter"></LateralOptions>
+      <LateralOptions @filterSelected="handleFilter" v-if="!isMobile"></LateralOptions>
       <ContentProdutos :filterProduto="filterProduto"></ContentProdutos>
     </div>
 
@@ -89,5 +89,11 @@ export default {
   padding: 5px;
   border-radius: 3px;
   color: var(--text-color2);
+}
+
+@media screen and (max-width: 768px) {
+  .gridListingContainer{
+    display: block;
+  }
 }
 </style>

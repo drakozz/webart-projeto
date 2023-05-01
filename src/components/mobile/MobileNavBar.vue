@@ -1,5 +1,5 @@
 <template>
-  <font-awesome-icon icon="fa-solid fa-xmark" class="icon-close" v-if="menu" @click="menu = !menu"/>
+  <font-awesome-icon icon="fa-solid fa-xmark" class="icon-close" v-if="menu" @click.prevent="closeMenu"/>
   <nav id="mobileNavBar" v-show="menu">
     <div class="logo">
       <img src="@/assets/images/logo.jpg" alt="">
@@ -88,63 +88,68 @@ import Dropdown from '../commons/Dropdown.vue';
 export default {
   name: 'MobileNavBar',
   data: () => ({
-    menuIsOpen: true,
-    menu: ''
-    // itensMenu: [
-    //   {
-    //     title: 'Ar Condicionado',
-    //     link: '#'
-    //   },
-    //   {
-    //     title: 'Ventilação',
-    //     link: '#'
-    //   },
-    //   {
-    //     title: 'Eletrodomésticos',
-    //     link: '#'
-    //   },
-    //   {
-    //     title: 'Eletroportáteis',
-    //     link: '#'
-    //   },
-    //   {
-    //     title: 'Casa Inteligente',
-    //     link: '#'
-    //   },
-    //   {
-    //     title: 'Comércio e Indústria',
-    //     link: '#'
-    //   },
-    //   {
-    //     title: 'Máquinas e Ferramentas',
-    //     link: '#'
-    //   },
-    //   {
-    //     title: 'Materiais de Instalação',
-    //     link: '#'
-    //   },
-    //   {
-    //     title: 'Fluído Gás Refrigerante',
-    //     link: '#'
-    //   },
-    //   {
-    //     title: 'Peças',
-    //     link: '#'
-    //   }
-    // ]
+    menuIsOpen: false,
+    itensMenu: [
+      {
+        title: 'Ar Condicionado',
+        link: '#'
+      },
+      {
+        title: 'Ventilação',
+        link: '#'
+      },
+      {
+        title: 'Eletrodomésticos',
+        link: '#'
+      },
+      {
+        title: 'Eletroportáteis',
+        link: '#'
+      },
+      {
+        title: 'Casa Inteligente',
+        link: '#'
+      },
+      {
+        title: 'Comércio e Indústria',
+        link: '#'
+      },
+      {
+        title: 'Máquinas e Ferramentas',
+        link: '#'
+      },
+      {
+        title: 'Materiais de Instalação',
+        link: '#'
+      },
+      {
+        title: 'Fluído Gás Refrigerante',
+        link: '#'
+      },
+      {
+        title: 'Peças',
+        link: '#'
+      }
+    ]
   }),
   components:{
     Dropdown
   },
   props: {
     menuLateralIsOpen: {
-      type: Boolean,
-      default: false
+      type: Boolean
     }
   },
-  updated(){
-    this.menu = this.menuIsOpen || this.menuLateralIsOpen
-    console.log(this.menu, this.menuIsOpen, this.menuLateralIsOpen)
+  computed:{
+    menu(){
+      return this.menuIsOpen || this.menuLateralIsOpen
+    }
+  },
+  methods: {
+    closeMenu(){
+      this.menuIsOpen = false
+      console.log('ta chamando', this.menuIsOpen, this.menu)
+    }
   }
 }
 </script>
@@ -153,7 +158,7 @@ export default {
   .icon-close{
     position: absolute;
     top: 20px;
-    right: 50px;
+    right: 20px;
     font-size: 3.5rem;
     color: var(--bg-color);
   }
@@ -179,25 +184,25 @@ export default {
   }
 
   #mobileNavBar .logo img{
-    width: 250px;
+    width: 60%;
   }
   
 
   .mobileMenuItens #dropdownMenuMobile{
     color: var(--bg-color);
-    font-size: 1.5rem;
+    font-size: 1rem;
   }
 
   .mobileMenuItens ul li{
     display: flex;
     align-items: center;
     padding: 15px;
-    color: var(--text-color);
-    font-size: 1.5rem;
+    color: var(--text-color2);
+    font-size: 1rem;
   }
 
   .mobileMenuItens ul li img{
-    width: 40px;
+    width: 20px;
     margin-right: 50px;
   }
 </style>

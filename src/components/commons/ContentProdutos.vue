@@ -150,4 +150,20 @@ export default {
     cursor: pointer;
   }
 
+  /* ALTERAÇOES MOBILE */
+
+  @media screen and (max-width: 768px) {
+    .contentProdutos{
+      width: 100%;
+    }
+
+    .contentProdutos .cardProdutos{
+      width: 50%;
+      padding: 10px;
+    }
+
+    .cardProdutos .selos .seloFrete img{
+      width: 50%;
+    }
+  }
 </style>
