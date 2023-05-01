@@ -1,10 +1,6 @@
 <template>
   <div>
     <Topo></Topo>
-    <div class="routes container">
-      <p>Home /⠀</p>
-      <span>Eletrodomésticos</span>
-    </div>
     
     <ContentMain>
     </ContentMain>

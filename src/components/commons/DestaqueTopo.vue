@@ -75,61 +75,60 @@
 <script>
 export default {
   name: 'DestaqueTopo',
-  data: ()=>({
+  data: () => ({
     destaqueMostrarMais: false
   })
 }
 </script>
 <style>
-  /* DESTAQUE TOPO */
-.destaque{
+/* DESTAQUE TOPO */
+.destaque {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.destaqueTopo{
+.destaqueTopo {
   padding: 10px;
   margin-top: 2rem;
   background-color: var(--bg-color-banner);
 }
 
-.destaqueTopo .textoDestaque{
+.destaqueTopo .textoDestaque {
   margin-left: 5rem;
 }
 
 .destaqueTopo .textoDestaque h3,
-.destaqueTopo .mostrarMais h3{
+.destaqueTopo .mostrarMais h3 {
   color: var(--bg-color);
   font-size: 1.5rem;
   margin-bottom: .5rem;
 }
 
 .destaqueTopo .textoDestaque p,
-.destaqueTopo .mostrarMais p{
+.destaqueTopo .mostrarMais p {
   color: var(--text-color2);
   margin-bottom: 1rem;
 }
 
-.destaqueTopo .textoDestaque a{
+.destaqueTopo .textoDestaque a {
   color: var(--bg-color);
   padding-top: 50px;
   font-size: .8rem;
   font-weight: bold;
 }
 
-.destaqueTopo .mostrarMais{
+.destaqueTopo .mostrarMais {
   margin: 0 auto;
   width: 80%;
   padding: 50px;
 }
 
-.destaqueTopo .mostrarMais span{
+.destaqueTopo .mostrarMais span {
   background-color: var(--bg-color);
   color: white;
   padding: 8px 15px;
   border-radius: 8px;
   cursor: pointer;
 }
-
 </style>
