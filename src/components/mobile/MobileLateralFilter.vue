@@ -3,7 +3,7 @@
     <a href="#">Filtrar</a>
   </div>
   <div class="mobileLateralFilter" v-if="filterIsOpen">
-   
+
     <div class="lateralFilter">
       <font-awesome-icon icon="fa-solid fa-xmark" class="icon-close" @click.prevent="openFilter" />
       <div class="category">
@@ -25,29 +25,40 @@
       <div class="priceOptions">
         <h3>Preço</h3>
         <fieldset>
-              <input type="radio" id="priceOptions1" name="priceOptions" value="665.00-5575.00" v-model="filterPrice" @change="filterProdutos">
-              <label for="priceOptions1"> R$665,00 a 5573,00</label><br>
-            </fieldset>
-            
-            <fieldset>
-              <input type="radio" id="priceOptions2" name="priceOptions" value="5573.01-10480.00" v-model="filterPrice" @change="filterProdutos">
-              <label for="priceOptions2"> R$5573,01 - 10480,00</label><br>
-            </fieldset>
+          <input type="radio" id="priceOptions1" name="priceOptions" value="665.00-5575.00" v-model="filterPrice"
+            @change="filterProdutos">
+          <label for="priceOptions1"> R$665,00 a 5573,00</label><br>
+        </fieldset>
 
-            <fieldset>
-              <input type="radio" id="priceOptions3" name="priceOptions" value="10480.01-15388.00" v-model="filterPrice" @change="filterProdutos">
-              <label for="priceOptions3"> R$10480,01 - 15388,00</label><br>
-            </fieldset>
+        <fieldset>
+          <input type="radio" id="priceOptions2" name="priceOptions" value="5573.01-10480.00" v-model="filterPrice"
+            @change="filterProdutos">
+          <label for="priceOptions2"> R$5573,01 - 10480,00</label><br>
+        </fieldset>
 
-            <fieldset>
-              <input type="radio" id="priceOptions4" name="priceOptions" value="15388.01-20295.00" v-model="filterPrice" @change="filterProdutos">
-              <label for="priceOptions4"> R$15388,01 - 20295,00</label><br>
-            </fieldset>
+        <fieldset>
+          <input type="radio" id="priceOptions3" name="priceOptions" value="10480.01-15388.00" v-model="filterPrice"
+            @change="filterProdutos">
+          <label for="priceOptions3"> R$10480,01 - 15388,00</label><br>
+        </fieldset>
 
-            <fieldset>
-              <input type="radio" id="priceOptions5" name="priceOptions" value="20295.01-25203.00" v-model="filterPrice" @change="filterProdutos">
-              <label for="priceOptions5"> R$20295,01 - 25203,00</label>
-            </fieldset>      
+        <fieldset>
+          <input type="radio" id="priceOptions4" name="priceOptions" value="15388.01-20295.00" v-model="filterPrice"
+            @change="filterProdutos">
+          <label for="priceOptions4"> R$15388,01 - 20295,00</label><br>
+        </fieldset>
+
+        <fieldset>
+          <input type="radio" id="priceOptions5" name="priceOptions" value="20295.01-25203.00" v-model="filterPrice"
+            @change="filterProdutos">
+          <label for="priceOptions5"> R$20295,01 - 25203,00</label>
+        </fieldset>
+
+        <fieldset>
+          <input type="radio" id="limparFiltro" name="priceOptions" value="0.00-25203.00" v-model="filterPrice"
+            @change="filterProdutos">
+          <label for="limparFiltro"> Limpar filtro</label>
+        </fieldset>
       </div>
     </div>
   </div>
@@ -60,10 +71,11 @@ export default {
     filterIsOpen: false
   }),
   methods: {
-    filterProdutos(){
+    filterProdutos() {
       this.$emit('filterSelected', this.filterPrice)
+      this.filterIsOpen = !this.filterIsOpen
     },
-    openFilter(){
+    openFilter() {
       return this.filterIsOpen = !this.filterIsOpen
     }
   },
@@ -71,7 +83,6 @@ export default {
 }
 </script>
 <style scoped>
-
 .btnFilter {
   max-width: 100vw;
   padding: 30px;
@@ -110,29 +121,31 @@ export default {
   overflow: hidden;
 }
 
-.mobileLateralFilter .lateralFilter{
+
+.mobileLateralFilter .lateralFilter {
   padding: 30px;
   font-size: .8rem;
   color: var(--text-color2);
 }
 
-.lateralFilter h3{
+.lateralFilter h3 {
   font-size: 1rem;
   color: var(--bg-color);
   margin-bottom: 10px;
 }
 
-.lateralFilter fieldset{
+.lateralFilter fieldset {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
   border: none;
 }
-.category{
+
+.category {
   margin-top: 50px;
 }
 
-.category select{
+.category select {
   margin-bottom: 20px;
 }
 </style>

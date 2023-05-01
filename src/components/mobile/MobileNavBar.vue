@@ -7,13 +7,13 @@
 
     <div class="mobileMenuItens">
       <ul>
-        <a href="#">
+        <a href="#" @click.prevent="subMenuIsOpen = !subMenuIsOpen">
           <li id="dropdownMenuMobile">
             <h3>
               Ver toda a loja
-              <font-awesome-icon icon="fa-solid fa-chevron-right" />
+              <font-awesome-icon icon="fa-solid fa-chevron-down" />
             </h3>
-            <Dropdown :itens="itensMenu"></Dropdown>
+            <Dropdown :itens="itensMenu" v-if="subMenuIsOpen"></Dropdown>
           </li>
         </a>
 
@@ -90,6 +90,7 @@ import Dropdown from '../commons/Dropdown.vue';
 export default {
   name: 'MobileNavBar',
   data: () => ({
+    subMenuIsOpen: false,
     itensMenu: [
       {
         title: 'Ar Condicionado',
@@ -187,14 +188,18 @@ export default {
   font-size: 1rem;
 }
 
-.mobileMenuItens #dropdownMenuMobile h3{
+.mobileMenuItens #dropdownMenuMobile h3 {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
 
-.mobileMenuItens #dropdownMenuMobile .subMenu{
-  display: none;
+.mobileMenuItens #dropdownMenuMobile .subMenu {
+  width: 100%;
+}
+
+#dropdownMenuMobile .subMenu ul li a {
+  color: var(--text-color2);
 }
 
 .mobileMenuItens ul li {
@@ -210,5 +215,4 @@ export default {
   width: 20px;
   margin-right: 10px;
 }
-
 </style>

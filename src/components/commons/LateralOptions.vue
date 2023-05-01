@@ -84,6 +84,12 @@
             @change="filterProdutos">
           <label for="priceOptions5"> R$20295,01 - 25203,00</label>
         </fieldset>
+
+        <fieldset>
+          <input type="radio" id="limparFiltro" name="priceOptions" value="0.00-25203.00" v-model="filterPrice"
+            @change="filterProdutos">
+          <label for="limparFiltro"> Limpar filtro</label>
+        </fieldset>
       </div>
     </div>
   </aside>

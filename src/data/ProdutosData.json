@@ -25,7 +25,7 @@
   },
   {
     "nome": "Micro-ondas LG Solo 30 Litros Preto MS3097",
-    "preco": 649.00,
+    "preco": 649.0,
     "imagem": "m_microondas-lg-solo-30-litros-preto-ms3097-220v.jpg",
     "desconto": "-28%",
     "selos": {
@@ -73,7 +73,7 @@
   },
   {
     "nome": "Geladeira/Refrigerador French Door 525L Preto GR-X228NMSM",
-    "preco": 18266.10,
+    "preco": 18266.1,
     "imagem": "m_geladeira-refrigerador-french-door-525l-preto-gr-x228nmsm-220v-14.jpg",
     "desconto": "-20%",
     "selos": {
@@ -85,7 +85,7 @@
   },
   {
     "nome": "Lava e Seca LG Smart 14kg Branca WD14WGSP6 - 220V",
-    "preco": 4760.90,
+    "preco": 4760.9,
     "imagem": "m_lava-e-seca-lg-smart-14kg-branca-wd14wgsp6-220v.jpeg",
     "desconto": "-23%",
     "selos": {
@@ -97,7 +97,7 @@
   },
   {
     "nome": "Coifa de Parede Fogatti Slim 90cm Vidro Curvo Inox",
-    "preco": 599.00,
+    "preco": 599.0,
     "imagem": "m_coifa-de-parede-fogatti-slim-vidro-curvo-inox-90cm-220v.png",
     "desconto": "-32%",
     "selos": {

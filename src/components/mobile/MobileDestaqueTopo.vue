@@ -108,7 +108,7 @@
 <script>
 export default {
   name: 'MobileDestaqueTopo',
-  data: ()=>({
+  data: () => ({
     destaqueMostrarMais: false
   })
 }
@@ -122,12 +122,11 @@ export default {
   align-items: center;
 }
 
-.destaque img{
+.destaque img {
   width: 90%;
 }
 
 .mobileDestaqueTopo {
-  display: flex;
   justify-content: center;
   flex-direction: column;
   padding: 10px;
@@ -173,6 +172,4 @@ export default {
   align-items: center;
   padding: 30px;
 }
-
-
 </style>

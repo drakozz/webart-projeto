@@ -1,10 +1,10 @@
 <template>
   <main class="main container">
-    <MobileDestaqueTopo v-if="isMobile"></MobileDestaqueTopo>
-    <DestaqueTopo v-else></DestaqueTopo>
-    <MobileLateralFilter v-if="isMobile"></MobileLateralFilter>
-    
-    <div class="filterProdutos" v-if="!isMobile">
+    <MobileDestaqueTopo></MobileDestaqueTopo>
+    <DestaqueTopo></DestaqueTopo>
+    <MobileLateralFilter @filterSelected="handleFilter"></MobileLateralFilter>
+
+    <div class="filterProdutos">
       <div class="filterItemPage">
         <p>Itens por página: </p>
         <select name="" id="">
@@ -25,7 +25,7 @@
     </div>
 
     <div class="gridListingContainer">
-      <LateralOptions @filterSelected="handleFilter" v-if="!isMobile"></LateralOptions>
+      <LateralOptions @filterSelected="handleFilter"></LateralOptions>
       <ContentProdutos :filterProduto="filterProduto"></ContentProdutos>
     </div>
 
@@ -58,11 +58,6 @@ export default {
     handleFilter(filter) {
       this.filterProduto = filter;
     }
-  },
-  computed: {
-    isMobile() {
-      return window.innerWidth < 768;
-    }
   }
 }
 </script>
@@ -94,8 +89,26 @@ export default {
   color: var(--text-color2);
 }
 
-@media screen and (max-width: 768px) {
-  .gridListingContainer{
+/*MEDIA RULES */
+.mobileDestaqueTopo,
+.btnFilter {
+  display: none;
+}
+
+
+@media screen and (max-width: 1023px) {
+  .destaqueTopo,
+  .filterProdutos,
+  aside {
+    display: none;
+  }
+
+  main .mobileDestaqueTopo,
+  .btnFilter{
+    display: flex;
+  }
+
+  .gridListingContainer {
     display: block;
   }
 }

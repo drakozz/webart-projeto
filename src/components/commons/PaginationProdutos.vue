@@ -75,7 +75,7 @@ export default {
   cursor: pointer;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1023px) {
   .paginationProdutos {
     display: flex;
   }
@@ -87,7 +87,7 @@ export default {
     flex-wrap: wrap;
   }
 
-  .pagination span{
+  .pagination span {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;

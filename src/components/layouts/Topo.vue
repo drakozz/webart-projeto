@@ -1,10 +1,10 @@
 <template>
-  <MobileHeader v-if="isMobile" @openMenu="handleMenu"></MobileHeader>
-  <Header v-else></Header>
+  <MobileHeader @openMenu="handleMenu"></MobileHeader>
+  <Header></Header>
 
 
-  <MobileNavBar v-if="isMobile && menuLateralIsOpen" @closeMenu="handleMenu"></MobileNavBar>
-  <NavBar v-else-if="!isMobile"></NavBar>
+  <MobileNavBar v-if="menuLateralIsOpen" @closeMenu="handleMenu"></MobileNavBar>
+  <NavBar></NavBar>
 </template>
 
 <script>
@@ -27,14 +27,25 @@ export default {
     handleMenu(valor) {
       this.menuLateralIsOpen = valor;
     }
-  },
-  computed: {
-    isMobile() {
-      return window.innerWidth < 768;
-    }
   }
 }
 </script>
 
 
-<style></style>
+<style>
+/*MEDIA RULES */
+.mobileHeader {
+  display: none;
+}
+
+@media screen and (max-width: 1023px) {
+  .topo,
+  .navBar {
+    display: none
+  }
+
+  .mobileHeader {
+    display: flex;
+  }
+}
+</style>
