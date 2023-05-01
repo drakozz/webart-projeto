@@ -2,16 +2,16 @@
   <nav class="navBar">
       <div class="container">
         <ul>
-          <a href="">
+          <a href="#">
             <li id="dropdownMenu">
               <font-awesome-icon icon="fa-solid fa-bars"/>
               <h3>Ver toda a loja</h3>
-              <font-awesome-icon icon="fa-solid fa-chevron-down" />
+              <font-awesome-icon icon="fa-solid fa-chevron-down" class="chevronMenu"/>
               <Dropdown :itens="itensMenu"></Dropdown>
             </li>
           </a>
 
-          <a href="">
+          <a href="#">
             <li>
               <img src="@/assets/images/icons/icon-ar.jpg" alt="">
               <p>Ar Condicionado</p>
@@ -20,7 +20,7 @@
 
           <span class="verticalLine"></span>
 
-          <a href="">
+          <a href="#">
             <li>
               <img src="@/assets/images/icons/icon-eletro.jpg" alt="">
               <p>Eletrodomésticos</p>
@@ -29,7 +29,7 @@
 
           <span class="verticalLine"></span>
 
-          <a href="">
+          <a href="#">
             <li>
               <img src="@/assets/images/icons/icon-eletro2.jpg" alt="">
               <p>Eletroportatéis</p>
@@ -38,7 +38,7 @@
           
           <span class="verticalLine"></span>
 
-          <a href="">
+          <a href="#">
             <li>
               <img src="@/assets/images/icons/industria.jpg" alt="">
               <p>Comércio e Indústria</p>
@@ -47,7 +47,7 @@
 
           <span class="verticalLine"></span>
 
-          <a href="">
+          <a href="#">
             <li>
               <img src="@/assets/images/icons/icon-pecas.jpg" alt="">
               <p>Peças</p>
@@ -56,7 +56,7 @@
 
           <span class="verticalLine"></span>
 
-          <a href="">
+          <a href="#">
             <li>
               <img src="@/assets/images/icons/icon-ferramentas.jpg" alt="">
               <p>Máquinas e Ferramentas</p>
@@ -65,7 +65,7 @@
 
           <span class="verticalLine"></span>
 
-          <a href="">
+          <a href="#">
             <li>
               <img src="@/assets/images/icons/icon-natal.jpg" alt="">
               <p>Natal</p>
@@ -173,6 +173,14 @@ export default {
   .navBar #dropdownMenu svg{
     color: rgb(32, 32, 129); 
     font-size: 1.3rem;
+  }
+
+  .navBar #dropdownMenu .chevronMenu{
+    transition: transform 0.5s ease;
+  }
+
+  .navBar #dropdownMenu:hover > .chevronMenu{
+    transform: rotateX(180deg);
   }
 
   .navBar #dropdownMenu h3{

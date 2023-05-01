@@ -7,15 +7,17 @@
 
     <div class="mobileMenuItens">
       <ul>
-        <a href="">
+        <a href="#">
           <li id="dropdownMenuMobile">
-            <h3>Ver toda a loja</h3>
-            <font-awesome-icon icon="fa-solid fa-chevron-right" />
+            <h3>
+              Ver toda a loja
+              <font-awesome-icon icon="fa-solid fa-chevron-right" />
+            </h3>
             <Dropdown :itens="itensMenu"></Dropdown>
           </li>
         </a>
 
-        <a href="">
+        <a href="#">
           <li>
             <img src="@/assets/images/icons/icon-ar.jpg" alt="">
             <p>Ar Condicionado</p>
@@ -24,7 +26,7 @@
         </a>
 
 
-        <a href="">
+        <a href="#">
           <li>
             <img src="@/assets/images/icons/icon-eletro.jpg" alt="">
             <p>Eletrodomésticos</p>
@@ -33,7 +35,7 @@
         </a>
 
 
-        <a href="">
+        <a href="#">
           <li>
             <img src="@/assets/images/icons/icon-eletro2.jpg" alt="">
             <p>Eletroportatéis</p>
@@ -42,7 +44,7 @@
         </a>
 
 
-        <a href="">
+        <a href="#">
           <li>
             <img src="@/assets/images/icons/industria.jpg" alt="">
             <p>Comércio e Indústria</p>
@@ -51,7 +53,7 @@
         </a>
 
 
-        <a href="">
+        <a href="#">
           <li>
             <img src="@/assets/images/icons/icon-pecas.jpg" alt="">
             <p>Peças</p>
@@ -60,7 +62,7 @@
         </a>
 
 
-        <a href="">
+        <a href="#">
           <li>
             <img src="@/assets/images/icons/icon-ferramentas.jpg" alt="">
             <p>Máquinas e Ferramentas</p>
@@ -69,7 +71,7 @@
         </a>
 
 
-        <a href="">
+        <a href="#">
           <li>
             <img src="@/assets/images/icons/icon-natal.jpg" alt="">
             <p>Natal</p>
@@ -142,7 +144,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .icon-close {
   position: absolute;
   top: 20px;
@@ -158,6 +160,7 @@ export default {
   left: -50px;
   max-width: 80vw;
   max-height: 100vh;
+  width: 90vw;
   height: 100vh;
   z-index: 99999;
   background-color: #fff;
@@ -177,13 +180,27 @@ export default {
 
 
 .mobileMenuItens #dropdownMenuMobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   color: var(--bg-color);
   font-size: 1rem;
+}
+
+.mobileMenuItens #dropdownMenuMobile h3{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.mobileMenuItens #dropdownMenuMobile .subMenu{
+  display: none;
 }
 
 .mobileMenuItens ul li {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 15px;
   color: var(--text-color2);
   font-size: 1rem;
@@ -191,6 +208,7 @@ export default {
 
 .mobileMenuItens ul li img {
   width: 20px;
-  margin-right: 50px;
+  margin-right: 10px;
 }
+
 </style>

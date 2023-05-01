@@ -1,27 +1,27 @@
 <template>
   <header class="container topo">
     <div class="logo">
-      <a href="">
+      <a href="#">
         <img src="@/assets/images/logo.jpg" alt="">
       </a>
     </div>
 
     <div class="searchBar">
       <input type="text" placeholder="Procure por produtos, marcas ou nomes...">
-      <a href="">
+      <a href="#">
         <img src="@/assets/images/icons/buscar.jpg" alt="">
       </a>
     </div>
 
     <div class="userSpace">
       <p>Olá, bem vindo(a)!</p>
-      <a href="">Entre</a> 
+      <a href="#">Entre</a> 
       ou
-      <a href="">Cadastre-se</a>
+      <a href="#">Cadastre-se</a>
     </div>
 
     <div class="myCart">
-      <a href="">
+      <a href="#">
         <h4>Meu carrinho</h4>
       </a>
     </div>

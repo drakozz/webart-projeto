@@ -2,6 +2,7 @@
   <MobileHeader v-if="isMobile" @openMenu="handleMenu"></MobileHeader>
   <Header v-else></Header>
 
+
   <MobileNavBar v-if="isMobile && menuLateralIsOpen" @closeMenu="handleMenu"></MobileNavBar>
   <NavBar v-else-if="!isMobile"></NavBar>
 </template>

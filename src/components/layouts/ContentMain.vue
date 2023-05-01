@@ -2,6 +2,7 @@
   <main class="main container">
     <MobileDestaqueTopo v-if="isMobile"></MobileDestaqueTopo>
     <DestaqueTopo v-else></DestaqueTopo>
+    <MobileLateralFilter v-if="isMobile"></MobileLateralFilter>
     
     <div class="filterProdutos" v-if="!isMobile">
       <div class="filterItemPage">
@@ -38,6 +39,7 @@ import MobileDestaqueTopo from '../mobile/MobileDestaqueTopo.vue';
 import LateralOptions from '../commons/LateralOptions.vue';
 import ContentProdutos from '../commons/ContentProdutos.vue';
 import PaginationProdutos from '../commons/PaginationProdutos.vue';
+import MobileLateralFilter from '../mobile/MobileLateralFilter.vue';
 
 export default {
   name: 'ContentMain',
@@ -46,7 +48,8 @@ export default {
     ContentProdutos,
     LateralOptions,
     PaginationProdutos,
-    MobileDestaqueTopo
+    MobileDestaqueTopo,
+    MobileLateralFilter
   },
   data: () => ({
     filterProduto: null

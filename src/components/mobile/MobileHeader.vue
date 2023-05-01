@@ -2,14 +2,14 @@
   <header class="mobileHeader">
     <div class="logo">
       <font-awesome-icon icon="fa-solid fa-bars" class="icon-open" @click="openMenu"/>
-      <a href="">
+      <a href="#">
         <img src="@/assets/images/logo.jpg" alt="">
       </a>
     </div>
 
     <div class="mobileSearchBar">
       <input type="text" placeholder="Procure por produtos, marcas ou nomes...">
-      <a href="">
+      <a href="#">
         <img src="@/assets/images/icons/buscar.jpg" alt="">
       </a>
     </div>
