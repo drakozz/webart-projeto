@@ -88,7 +88,7 @@ import Dropdown from '../commons/Dropdown.vue';
 export default {
   name: 'MobileNavBar',
   data: () => ({
-    menuIsOpen: false,
+    menuIsOpen: true,
     itensMenu: [
       {
         title: 'Ar Condicionado',
@@ -137,12 +137,13 @@ export default {
   },
   props: {
     menuLateralIsOpen: {
-      type: Boolean
+      type: Boolean,
+      default: false
     }
   },
   computed:{
     menu(){
-      return this.menuIsOpen || this.menuLateralIsOpen
+      return this.menuIsOpen && this.menuLateralIsOpen
     }
   },
   methods: {
