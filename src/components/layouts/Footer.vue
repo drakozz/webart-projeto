@@ -16,6 +16,7 @@ export default {
     align-items: center;
     flex-direction: column;
     margin: 60px;
+    text-align: center;
   }
 
   .footer p{

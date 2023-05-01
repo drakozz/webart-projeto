@@ -2,8 +2,8 @@
   <MobileHeader v-if="isMobile" @openMenu="handleMenu"></MobileHeader>
   <Header v-else></Header>
 
-  <MobileNavBar v-if="isMobile" :menuLateralIsOpen="menuLateralIsOpen"></MobileNavBar>
-  <NavBar v-else></NavBar>
+  <MobileNavBar v-if="isMobile && menuLateralIsOpen" @closeMenu="handleMenu"></MobileNavBar>
+  <NavBar v-else-if="!isMobile"></NavBar>
 </template>
 
 <script>
@@ -20,12 +20,11 @@ export default {
     MobileNavBar
   },
   data: () => ({
-    menuLateralIsOpen: null
+    menuLateralIsOpen: false
   }),
   methods: {
     handleMenu(valor) {
       this.menuLateralIsOpen = valor;
-      console.log(this.menuLateralIsOpen)
     }
   },
   computed: {
