@@ -3,46 +3,56 @@
     <div class="category">
       <h3>Categorias</h3>
       <ul>
-        <li>
+        <li @click="selectCategory(1)">
           <a href="#">Adega de Vinho</a>
         </li>
-        <li>
+
+        <li @click="selectCategory(2)">
           <a href="#">Churrasqueira Elétrica</a>
         </li>
-        <li>
+
+        <li @click="selectCategory(3)">
           <a href="#">
             Churrasqueira
           </a>
         </li>
-        <li>
+
+        <li @click="selectCategory(4)">
           <a href="#">
             Coifa
           </a>
         </li>
-        <li>
+
+        <li @click="selectCategory(5)">
           <a href="#">
             Cooktop
           </a>
         </li>
-        <li>
+
+        <li @click="selectCategory(6)">
           <a href="#">
             Depurador de Ar
           </a>
         </li>
-        <li>
+
+        <li @click="selectCategory(7)">
           <a href="#">
             Fogão a Gás
           </a>
         </li>
-        <li>
+
+        <li @click="selectCategory(8)">
           <a href="#">Forno a Gás</a>
         </li>
-        <li>
+
+        <li @click="selectCategory(9)">
           <a href="#">Forno Elétrico</a>
         </li>
-        <li>
+
+        <li @click="selectCategory(10)">
           <a href="#">Frigobar</a>
         </li>
+
         <span>
           <a href="#">Ver Mais</a>
         </span>
@@ -105,7 +115,11 @@ export default {
   methods: {
     filterProdutos() {
       this.$emit('filterSelected', this.filterPrice)
-    }
+    },
+    selectCategory(category) {
+      console.log(category, typeof category)
+      this.$emit("categorySelected", toString(category))
+    },
   }
 }
 

@@ -4,6 +4,7 @@
     "preco": 1499.13,
     "imagem": "m_forno-a-g-s-de-embutir-venax-bianco-90-litros-branco-110v.jpg",
     "desconto": "-21%",
+    "idCategoria": "8",
     "selos": {
       "freteGratis": "",
       "marca": "venax.jpg",
@@ -16,6 +17,7 @@
     "preco": 1410.72,
     "imagem": "m_forno-de-embutir-venax-arena-eg-gii-inox-50-litros-220v-2.jpg",
     "desconto": "-21%",
+    "idCategoria": "8",
     "selos": {
       "freteGratis": "",
       "marca": "venax.jpg",
@@ -28,6 +30,7 @@
     "preco": 649.0,
     "imagem": "m_microondas-lg-solo-30-litros-preto-ms3097-220v.jpg",
     "desconto": "-28%",
+    "idCategoria": "",
     "selos": {
       "freteGratis": "",
       "marca": "lg.jpg",
@@ -40,6 +43,7 @@
     "preco": 1890.52,
     "imagem": "m_refrigerador-electrolux-degelo-pr-tico-240-litros-re31-branco-220v.jpg",
     "desconto": "-23%",
+    "idCategoria": "",
     "selos": {
       "freteGratis": "",
       "marca": "electrolux.png",
@@ -52,6 +56,7 @@
     "preco": 3500.99,
     "imagem": "m_lava-e-seca-lg-vc5-11kg-branca-cv3011wg4-220v.jpg",
     "desconto": "-20%",
+    "idCategoria": "",
     "selos": {
       "freteGratis": "",
       "marca": "lg.jpg",
@@ -64,6 +69,7 @@
     "preco": 793.24,
     "imagem": "m_forno-el-trico-de-embutir-venax-grand-gourmet-45-litros-preto-220v.jpg",
     "desconto": "-21%",
+    "idCategoria": "9",
     "selos": {
       "freteGratis": "",
       "marca": "venax.jpg",
@@ -76,6 +82,7 @@
     "preco": 18266.1,
     "imagem": "m_geladeira-refrigerador-french-door-525l-preto-gr-x228nmsm-220v-14.jpg",
     "desconto": "-20%",
+    "idCategoria": "",
     "selos": {
       "freteGratis": "",
       "marca": "lg.jpg",
@@ -88,6 +95,7 @@
     "preco": 4760.9,
     "imagem": "m_lava-e-seca-lg-smart-14kg-branca-wd14wgsp6-220v.jpeg",
     "desconto": "-23%",
+    "idCategoria": "",
     "selos": {
       "freteGratis": "frete-gratis.png",
       "marca": "lg.jpg",
@@ -100,6 +108,7 @@
     "preco": 599.0,
     "imagem": "m_coifa-de-parede-fogatti-slim-vidro-curvo-inox-90cm-220v.png",
     "desconto": "-32%",
+    "idCategoria": "4",
     "selos": {
       "freteGratis": "frete-gratis.png",
       "marca": "fogatti.jpg",
@@ -112,6 +121,7 @@
     "preco": 617.08,
     "imagem": "m_micro-ondas-consul-32-litros-branco-cms46ab-220v.jpg",
     "desconto": "-21%",
+    "idCategoria": "",
     "selos": {
       "freteGratis": "frete-gratis.png",
       "marca": "consul.jpg",
@@ -124,6 +134,7 @@
     "preco": 775.34,
     "imagem": "m_forno-el-trico-continental-44-litros-branco-bc44b-220v.jpg",
     "desconto": "-20%",
+    "idCategoria": "9",
     "selos": {
       "freteGratis": "",
       "marca": "continental.jpg",
@@ -136,6 +147,7 @@
     "preco": 675.91,
     "imagem": "m_coifa-de-parede-fogatti-slim-vidro-curvo-inox-60cm-220v-6.jpg",
     "desconto": "-21%",
+    "idCategoria": "4",
     "selos": {
       "freteGratis": "",
       "marca": "fogatti.jpg",

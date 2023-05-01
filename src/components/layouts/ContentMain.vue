@@ -25,8 +25,8 @@
     </div>
 
     <div class="gridListingContainer">
-      <LateralOptions @filterSelected="handleFilter"></LateralOptions>
-      <ContentProdutos :filterProduto="filterProduto"></ContentProdutos>
+      <LateralOptions @filterSelected="handleFilter" @categorySelected="handleFilter"></LateralOptions>
+      <ContentProdutos :filterProduto="filterProduto" :filterCategory="filterCategory"></ContentProdutos>
     </div>
 
     <PaginationProdutos></PaginationProdutos>
@@ -52,11 +52,13 @@ export default {
     MobileLateralFilter
   },
   data: () => ({
-    filterProduto: null
+    filterProduto: null,
+    filterCategory: null
   }),
   methods: {
-    handleFilter(filter) {
-      this.filterProduto = filter;
+    handleFilter(filter, category) {
+      this.filterProduto = filter
+      this.filterCategory = category
     }
   }
 }
