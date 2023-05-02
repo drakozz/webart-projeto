@@ -26,6 +26,7 @@ export default {
 }
 </script>
 <style>
+/* MOBILE HEADER */
 .mobileHeader {
   display: flex;
   flex-direction: column;

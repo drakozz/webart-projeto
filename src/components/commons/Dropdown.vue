@@ -1,4 +1,4 @@
-<template >
+<template>
   <div class="subMenu">
     <ul>
       <li v-for="(item, i) in itens" :key="i">
@@ -18,6 +18,7 @@ export default {
 </script>
 
 <style>
+/* DROPDOWN */
 #dropdownMenu {
   position: relative;
 }
@@ -53,6 +54,7 @@ export default {
   padding: 1rem 0;
 }
 
+/* ALTERAÇOES MOBILE */
 @media screen and (max-width: 1023px) {
   #dropdownMenuMobile .subMenu ul li {
     display: flex;

@@ -33,6 +33,7 @@ export default {
 }
 </script>
 <style>
+/* PAGINAÇÃO DE PRODUTOS */
 .pagination {
   display: flex;
   justify-content: center;
@@ -76,6 +77,7 @@ export default {
   cursor: pointer;
 }
 
+/* ALTERAÇOES MOBILE */
 @media screen and (max-width: 1023px) {
   .paginationProdutos {
     display: flex;

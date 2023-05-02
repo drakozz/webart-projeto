@@ -33,7 +33,7 @@ export default {
 }
 </script>
 <style >
-/* CSS TOPO */
+/* CSS HEADER */
 .topo {
   display: flex;
   justify-content: space-around;

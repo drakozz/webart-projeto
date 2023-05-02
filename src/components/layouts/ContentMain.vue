@@ -69,6 +69,8 @@ export default {
 </script>
 
 <style>
+
+/* CONTEÚDO PRINCIPAL */
 .gridListingContainer {
   display: grid;
   grid-template-columns: .5fr 2.5fr;
@@ -101,7 +103,7 @@ export default {
   display: none;
 }
 
-
+/* ALTERAÇOES MOBILE */
 @media screen and (max-width: 1023px) {
 
   .destaqueTopo,

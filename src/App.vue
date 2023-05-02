@@ -1,10 +1,7 @@
 <template>
   <div>
     <Topo></Topo>
-    
-    <ContentMain>
-    </ContentMain>
-    
+    <ContentMain></ContentMain>
     <Footer></Footer>
   </div>
 </template>
@@ -61,22 +58,6 @@ a {
 .container{
   max-width: 1120px;
   margin: 0 auto;
-}
-
-/* ROUTES */
-.routes{
-  display: flex;
-  margin-top: 20px;
-}
-
-.routes p{
-  font-size: .8rem;
-  color: var(--text-color2);
-}
-
-.routes span{
-  color: var(--bg-color);
-  font-weight: bold;
 }
 
 

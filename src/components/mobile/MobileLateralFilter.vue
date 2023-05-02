@@ -93,6 +93,7 @@ export default {
 }
 </script>
 <style scoped>
+/* FILTROS MOBILE*/
 .btnFilter {
   max-width: 100vw;
   padding: 30px;
