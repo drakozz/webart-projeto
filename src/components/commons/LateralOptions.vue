@@ -3,6 +3,10 @@
     <div class="category">
       <h3>Categorias</h3>
       <ul>
+        <li @click="selectCategory('')" class="limparCategoria">
+          <a href="#">Limpar Categoria</a>
+        </li>
+
         <li @click="selectCategory('1')">
           <a href="#">Adega de Vinho</a>
         </li>
@@ -70,6 +74,7 @@
         <span>
           <a href="#">Ver Mais</a>
         </span>
+
       </ul>
     </div>
 
@@ -164,6 +169,15 @@ export default {
 
 .lateralOptions .category span {
   text-decoration: underline;
+}
+
+.category .limparCategoria{
+  margin-bottom: 10px;
+}
+
+.lateralOptions .category .limparCategoria a{
+  color: var(--bg-color);
+  font-weight: bold;
 }
 
 .lateralOptions .priceOptions fieldset {
