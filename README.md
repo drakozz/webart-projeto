@@ -1,4 +1,3 @@
-# webart-projeto
 
 # Projeto realizado para o processo seletivo da webart
 
