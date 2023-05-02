@@ -42,32 +42,46 @@ import ProdutosData from '@/data/ProdutosData.json'
 export default {
   name: 'ContentProdutos',
   data: () => ({
-    dataProdutos: ProdutosData,
+    dataProdutos: ProdutosData
   }),
   props: {
     filterProduto: {
+      type: String,
+      default: ''
+    },
+    filterCategory: {
       type: String,
       default: ''
     }
   },
   computed: {
     produtosFiltrados() {
-
-      if (this.filterProduto === null) {
+      if (this.filterProduto === null && this.filterCategory === null) {
         return this.dataProdutos
       }
+      let produtosFiltradosPorPreco = this.filtrarPorPreco;
+      if (this.filterCategory === '' || this.filterCategory === null) {
+        return produtosFiltradosPorPreco
+      }
       else {
-        let valor = this.filterProduto.split('-')
-        let [min, max] = valor
-        return this.dataProdutos.filter(
-          produto =>
-            parseFloat(produto.preco) >= parseFloat(min)
-            &&
-            parseFloat(produto.preco) <= parseFloat(max)
+        return produtosFiltradosPorPreco.filter(
+          produto => produto.idCategoria == this.filterCategory
         )
       }
-    }
+    },
+    filtrarPorPreco() {
+      if (this.filterProduto == '' || typeof (this.filterProduto) !== 'string') {
+        return this.dataProdutos;
+      }
 
+      let valor = this.filterProduto.split("-")
+      let [min, max] = valor
+      return this.dataProdutos.filter(
+        produto =>
+          parseFloat(produto.preco) >= parseFloat(min) &&
+          parseFloat(produto.preco) <= parseFloat(max)
+      )
+    }
   }
 }
 
@@ -168,4 +182,5 @@ export default {
   .cardProdutos .selos .seloFrete img {
     width: 50%;
   }
-}</style>
+}
+</style>

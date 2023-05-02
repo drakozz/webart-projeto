@@ -35,6 +35,7 @@ export default {
 <style>
 .pagination {
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 

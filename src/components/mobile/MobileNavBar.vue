@@ -198,10 +198,6 @@ export default {
   width: 100%;
 }
 
-#dropdownMenuMobile .subMenu ul li a {
-  color: var(--text-color2);
-}
-
 .mobileMenuItens ul li {
   display: flex;
   align-items: center;

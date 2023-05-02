@@ -2,7 +2,7 @@
   <main class="main container">
     <MobileDestaqueTopo></MobileDestaqueTopo>
     <DestaqueTopo></DestaqueTopo>
-    <MobileLateralFilter @filterSelected="handleFilter"></MobileLateralFilter>
+    <MobileLateralFilter @filterSelected="handleFilterPrice" @categorySelected="handleFilterCategory"></MobileLateralFilter>
 
     <div class="filterProdutos">
       <div class="filterItemPage">
@@ -25,8 +25,10 @@
     </div>
 
     <div class="gridListingContainer">
-      <LateralOptions @filterSelected="handleFilter"></LateralOptions>
-      <ContentProdutos :filterProduto="filterProduto"></ContentProdutos>
+      <LateralOptions 
+      @filterSelected="handleFilterPrice" 
+      @categorySelected="handleFilterCategory"></LateralOptions>
+      <ContentProdutos :filterProduto="filterProduto" :filterCategory="filterCategory"></ContentProdutos>
     </div>
 
     <PaginationProdutos></PaginationProdutos>
@@ -52,11 +54,16 @@ export default {
     MobileLateralFilter
   },
   data: () => ({
-    filterProduto: null
+    filterProduto: null,
+    filterCategory: null
   }),
   methods: {
-    handleFilter(filter) {
-      this.filterProduto = filter;
+    handleFilterPrice(filter) {
+      this.filterProduto = filter
+      
+    },
+    handleFilterCategory(category){
+      this.filterCategory = category
     }
   }
 }
