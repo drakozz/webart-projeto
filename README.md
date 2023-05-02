@@ -1,8 +1,7 @@
 # webart-projeto
 
-#Projeto realizado para o processo seletivo da webart
+# Projeto realizado para o processo seletivo da webart
 
-#
 
 ## Project setup
 ```
