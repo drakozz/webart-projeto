@@ -3,54 +3,68 @@
     <div class="category">
       <h3>Categorias</h3>
       <ul>
-        <li @click="selectCategory(1)">
+        <li @click="selectCategory('1')">
           <a href="#">Adega de Vinho</a>
         </li>
 
-        <li @click="selectCategory(2)">
+        <li @click="selectCategory('2')">
           <a href="#">Churrasqueira Elétrica</a>
         </li>
 
-        <li @click="selectCategory(3)">
+        <li @click="selectCategory('3')">
           <a href="#">
             Churrasqueira
           </a>
         </li>
 
-        <li @click="selectCategory(4)">
+        <li @click="selectCategory('4')">
           <a href="#">
             Coifa
           </a>
         </li>
 
-        <li @click="selectCategory(5)">
+        <li @click="selectCategory('5')">
+          <a href="#">
+            Microondas
+          </a>
+        </li>
+
+        <li @click="selectCategory('6')">
           <a href="#">
             Cooktop
           </a>
         </li>
 
-        <li @click="selectCategory(6)">
+        <li @click="selectCategory('7')">
           <a href="#">
             Depurador de Ar
           </a>
         </li>
 
-        <li @click="selectCategory(7)">
+        <li @click="selectCategory('8')">
           <a href="#">
             Fogão a Gás
           </a>
         </li>
 
-        <li @click="selectCategory(8)">
+        <li @click="selectCategory('9')">
           <a href="#">Forno a Gás</a>
         </li>
 
-        <li @click="selectCategory(9)">
+        <li @click="selectCategory('10')">
           <a href="#">Forno Elétrico</a>
         </li>
 
-        <li @click="selectCategory(10)">
+        <li @click="selectCategory('11')">
           <a href="#">Frigobar</a>
+        </li>
+
+        <li @click="selectCategory('12')">
+          <a href="#">Geladeira</a>
+        </li>
+
+        <li @click="selectCategory('13')">
+          <a href="#">Lava e Seca</a>
         </li>
 
         <span>
@@ -110,17 +124,19 @@
 export default {
   name: 'LateralOptions',
   data: () => ({
-    filterPrice: null
+    filterPrice: null,
+    filterCategory: null
   }),
   methods: {
     filterProdutos() {
       this.$emit('filterSelected', this.filterPrice)
     },
     selectCategory(category) {
-      console.log(category, typeof category)
-      this.$emit("categorySelected", toString(category))
-    },
-  }
+      this.filterCategory = category
+      this.$emit("categorySelected", this.filterCategory)
+    }
+  },
+  emits: ["filterSelected", "categorySelected"]
 }
 
 </script>

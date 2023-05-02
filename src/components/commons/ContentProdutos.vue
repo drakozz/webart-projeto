@@ -42,7 +42,7 @@ import ProdutosData from '@/data/ProdutosData.json'
 export default {
   name: 'ContentProdutos',
   data: () => ({
-    dataProdutos: ProdutosData,
+    dataProdutos: ProdutosData
   }),
   props: {
     filterProduto: {
@@ -56,29 +56,21 @@ export default {
   },
   computed: {
     produtosFiltrados() {
-      console.log(
-        this.filterCategory, typeof this.filterCategory, 
-        this.filterProduto, typeof this.filterProduto)
       if (this.filterProduto === null && this.filterCategory === null) {
         return this.dataProdutos
       }
       let produtosFiltradosPorPreco = this.filtrarPorPreco;
-      if (this.filterCategory === '') {
+      if (this.filterCategory === '' || this.filterCategory === null) {
         return produtosFiltradosPorPreco
       }
       else {
         return produtosFiltradosPorPreco.filter(
-          produto => produto.idCategoria === this.filterCategory
+          produto => produto.idCategoria == this.filterCategory
         )
       }
-
     },
     filtrarPorPreco() {
-      if (this.filterProduto == '') {
-        return this.dataProdutos;
-      }
-
-      if (typeof (this.filterProduto) !== 'string') {
+      if (this.filterProduto == '' || typeof (this.filterProduto) !== 'string') {
         return this.dataProdutos;
       }
 

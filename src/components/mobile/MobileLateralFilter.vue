@@ -8,17 +8,20 @@
       <font-awesome-icon icon="fa-solid fa-xmark" class="icon-close" @click.prevent="openFilter" />
       <div class="category">
         <h3>Categorias</h3>
-        <select name="" id="">
-          <option value="">Adega de Vinho</option>
-          <option value="">Churrasqueira Elétrica</option>
-          <option value="">Churrasqueira</option>
-          <option value="">Coifa</option>
-          <option value="">Cooktop</option>
-          <option value="">Depurador de Ar</option>
-          <option value="">Fogão a Gás</option>
-          <option value="">Forno a Gás</option>
-          <option value="">Forno Elétrico</option>
-          <option value="">Frigobar</option>
+        <select name="" id="" @change="selectCategory">
+          <option value="1">Adega de Vinho</option>
+          <option value="2">Churrasqueira Elétrica</option>
+          <option value="3">Churrasqueira</option>
+          <option value="4">Coifa</option>
+          <option value="5">Micro-ondas</option>
+          <option value="6">Cooktop</option>
+          <option value="7">Depurador de Ar</option>
+          <option value="8">Fogão a Gás</option>
+          <option value="9">Forno a Gás</option>
+          <option value="10">Forno Elétrico</option>
+          <option value="11">Frigobar</option>
+          <option value="12">Geladeira</option>
+          <option value="13">Lava e Seca</option>
         </select>
       </div>
 
@@ -68,6 +71,7 @@ export default {
   name: 'MobileLateralFilter',
   data: () => ({
     filterPrice: null,
+    filterCategory: null,
     filterIsOpen: false
   }),
   methods: {
@@ -77,8 +81,13 @@ export default {
     },
     openFilter() {
       return this.filterIsOpen = !this.filterIsOpen
+    },
+    selectCategory(e){
+      this.filterCategory = e.target.value
+      this.$emit('categorySelected', this.filterCategory)
     }
   },
+  emits: ["filterSelected", "categorySelected"]
 
 }
 </script>
