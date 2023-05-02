@@ -53,16 +53,16 @@ export default {
   padding: 1rem 0;
 }
 
-@media screen and (max-width: 1023px){
-  #dropdownMenuMobile .subMenu ul li{
+@media screen and (max-width: 1023px) {
+  #dropdownMenuMobile .subMenu ul li {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
-    
+
   }
 
-  #dropdownMenuMobile .subMenu ul li a{
+  #dropdownMenuMobile .subMenu ul li a {
     color: var(--text-color2);
     font-size: .8rem;
   }

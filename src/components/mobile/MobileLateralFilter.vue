@@ -9,6 +9,7 @@
       <div class="category">
         <h3>Categorias</h3>
         <select name="" id="" @change="selectCategory">
+          <option value="">Todos</option>
           <option value="1">Adega de Vinho</option>
           <option value="2">Churrasqueira Elétrica</option>
           <option value="3">Churrasqueira</option>
@@ -82,7 +83,7 @@ export default {
     openFilter() {
       return this.filterIsOpen = !this.filterIsOpen
     },
-    selectCategory(e){
+    selectCategory(e) {
       this.filterCategory = e.target.value
       this.$emit('categorySelected', this.filterCategory)
     }

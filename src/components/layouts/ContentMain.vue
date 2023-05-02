@@ -2,7 +2,8 @@
   <main class="main container">
     <MobileDestaqueTopo></MobileDestaqueTopo>
     <DestaqueTopo></DestaqueTopo>
-    <MobileLateralFilter @filterSelected="handleFilterPrice" @categorySelected="handleFilterCategory"></MobileLateralFilter>
+    <MobileLateralFilter @filterSelected="handleFilterPrice" @categorySelected="handleFilterCategory">
+    </MobileLateralFilter>
 
     <div class="filterProdutos">
       <div class="filterItemPage">
@@ -25,9 +26,7 @@
     </div>
 
     <div class="gridListingContainer">
-      <LateralOptions 
-      @filterSelected="handleFilterPrice" 
-      @categorySelected="handleFilterCategory"></LateralOptions>
+      <LateralOptions @filterSelected="handleFilterPrice" @categorySelected="handleFilterCategory"></LateralOptions>
       <ContentProdutos :filterProduto="filterProduto" :filterCategory="filterCategory"></ContentProdutos>
     </div>
 
@@ -60,9 +59,9 @@ export default {
   methods: {
     handleFilterPrice(filter) {
       this.filterProduto = filter
-      
+
     },
-    handleFilterCategory(category){
+    handleFilterCategory(category) {
       this.filterCategory = category
     }
   }
@@ -104,6 +103,7 @@ export default {
 
 
 @media screen and (max-width: 1023px) {
+
   .destaqueTopo,
   .filterProdutos,
   aside {
@@ -111,7 +111,7 @@ export default {
   }
 
   main .mobileDestaqueTopo,
-  .btnFilter{
+  .btnFilter {
     display: flex;
   }
 

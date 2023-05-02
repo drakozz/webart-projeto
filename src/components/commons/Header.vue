@@ -54,10 +54,12 @@ export default {
   border: 1px solid var(--text-color2);
   border-radius: 10px 0 0 10px;
   outline: none;
+  padding-left: 10px;
 }
 
 .searchBar img {
-  height: 42px;
+  height: 41px;
+  margin-bottom: 2px;
 }
 
 .searchBar a {
