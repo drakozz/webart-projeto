@@ -147,6 +147,8 @@ export default {
 </script>
 
 <style>
+/* OPÇÕES LATERAIS */
+
 .lateralOptions {
   margin-top: 50px;
 }

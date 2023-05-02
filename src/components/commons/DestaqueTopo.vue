@@ -12,7 +12,8 @@
       </div>
     </div>
 
-    <div class="mostrarMais" v-show="destaqueMostrarMais">
+    <Transition name="fadeMostrarMais">
+      <div class="mostrarMais" v-show="destaqueMostrarMais">
         <h3>Tipos de eletrodoméstico</h3>
         <p>
           Quando o assunto é eletrodoméstico, o que não falta é a variedade de equipamentos para facilitar sua vida em diversos aspectos.
@@ -69,6 +70,7 @@
 
         <span @click.prevent="destaqueMostrarMais = !destaqueMostrarMais">Recolher</span>
       </div>
+    </Transition>
         
   </section>
 </template>
@@ -77,10 +79,24 @@ export default {
   name: 'DestaqueTopo',
   data: () => ({
     destaqueMostrarMais: false
-  })
+  }),
+  methods: {
+
+  }
 }
 </script>
 <style>
+/* ANIMAÇÕES */
+.fadeMostrarMais-enter-active,
+.fadeMostrarMais-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.fadeMostrarMais-enter-from,
+.fadeMostrarMais-leave-to {
+  opacity: 0;
+}
+
 /* DESTAQUE TOPO */
 .destaque {
   display: flex;

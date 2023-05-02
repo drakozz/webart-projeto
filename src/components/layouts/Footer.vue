@@ -10,6 +10,7 @@ export default {
 }
 </script>
 <style>
+/* FOOTER */
 .footer {
   display: flex;
   justify-content: center;

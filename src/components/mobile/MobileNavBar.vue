@@ -11,7 +11,8 @@
           <li id="dropdownMenuMobile">
             <h3>
               Ver toda a loja
-              <font-awesome-icon icon="fa-solid fa-chevron-down" />
+              <font-awesome-icon icon="fa-solid fa-chevron-down"
+                :class="{ 'fa-chevron-down': subMenuIsOpen, 'chevronMenuUp': !subMenuIsOpen }" />
             </h3>
             <Dropdown :itens="itensMenu" v-if="subMenuIsOpen"></Dropdown>
           </li>
@@ -146,6 +147,15 @@ export default {
 </script>
 
 <style scoped>
+/* MOBILE NAVBAR*/
+.fa-chevron-down {
+  transition: transform 0.5s ease;
+}
+
+.chevronMenuUp {
+  transform: rotateX(180deg);
+}
+
 .icon-close {
   position: absolute;
   top: 20px;
@@ -154,11 +164,12 @@ export default {
   color: var(--bg-color);
 }
 
+
 #mobileNavBar {
   margin-left: 50px;
   position: fixed;
   top: 0;
-  left: -50px;
+  left: -50px; 
   max-width: 80vw;
   max-height: 100vh;
   width: 90vw;
@@ -167,6 +178,7 @@ export default {
   background-color: #fff;
   transition: 300ms;
   overflow: hidden;
+  transition: transform .3s ease-out;
 }
 
 #mobileNavBar .logo {
