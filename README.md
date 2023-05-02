@@ -2,7 +2,7 @@
 
 #Projeto realizado para o processo seletivo da webart
 
-# projetowapstore
+#
 
 ## Project setup
 ```
