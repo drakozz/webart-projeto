@@ -130,7 +130,6 @@ export default {
   name: 'LateralOptions',
   data: () => ({
     filterPrice: null,
-    filterCategory: null
   }),
   methods: {
     filterProdutos() {
